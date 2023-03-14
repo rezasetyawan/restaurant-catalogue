@@ -1,0 +1,134 @@
+    .restaurant {
+        width: 100%;
+        margin: 60px auto;
+        text-align: center;
+    }
+
+    restaurant-list {
+        margin: 20px;
+        display: grid;
+        grid-row-gap: 16px;
+        text-align: left;
+    }
+
+    .restaurant > h2 {
+        font-size: 28px;
+        font-weight: lighter;
+    }
+
+    restaurant-item {
+        position: relative;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        width: 100%;
+        border-radius: 5px;
+        overflow: hidden;
+    }
+
+    .restaurant-item-description {
+        width: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .restaurant-item-content {
+        padding: 16px;
+    }
+
+    .restaurant-item-thumbnail {
+        width: 100%;
+    }
+
+    .restaurant-city {
+        position: absolute;
+        width: 100px;
+        text-align: center;
+        top: 5px;
+        left: 5px;
+        background-color: rgba(255, 255, 255, 0.9);
+        padding: 5px;
+        border-radius: 2px;
+    }
+
+    .restaurant-rating {
+        color: red;
+        display: block;
+        font-weight: bolder;
+        text-decoration: none;
+    }
+
+    .restaurant-name {
+        font-size: larger;
+        font-weight: bolder;
+    }
+
+    .restaurant-name > a {
+        display: inline-block;
+        min-height: 45px;
+        max-height: 45px;
+        min-width: 45px;
+        max-width: 100%;
+    }
+
+    a {
+        color: black;
+        text-decoration: underline;
+    }
+
+    .restaurant-item__not__found {
+        text-align: center;
+        margin: 0 auto;
+    }
+
+
+    @media screen and (max-width: 700px) {
+        h2 {
+            font-size: 25px;
+        }
+    }
+
+    @media screen and (max-width: 650px) {
+
+        .restaurant-item-description,
+        .restaurant-name,
+        .restaurant-rating {
+            font-size: smaller;
+        }
+    }
+
+    @media screen and (min-width: 650px) {
+        .restaurant-item-content {
+            padding: 16px 32px 32px 32px;
+        }
+
+        .restaurant-name {
+            font-size: 18px;
+        }
+
+        restaurant-item-description {
+            font-size: 14px;
+        }
+    }
+
+    @media screen and (min-width: 700px) {
+        restaurant-list {
+            margin: 50px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-column-gap: 10px;
+            grid-row-gap: 16px;
+        }
+    }
+
+    @media screen and (min-width: 900px) {
+        restaurant-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+    }
+
+    @media screen and (min-width: 1200px) {
+        main {
+            max-width: 100%;
+        }
+    }

@@ -1,0 +1,195 @@
+/* RESTAURANT INFO */
+
+.restaurant-detail {
+    margin: 15px auto;
+    width: 100%;
+    max-width: 800px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 18px 16px;
+    padding: 16px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px rgba(154, 160, 185, .5), 1px 1px 20px rgba(166, 173, 201, .5);
+
+}
+
+.restaurant-detail>img {
+    width: 100%;
+    max-width: 400px;
+    aspect-ratio: 3/4;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+
+.restaurant-detail>h2 {
+    font-size: larger;
+    font-weight: bolder;
+}
+
+.restaurant-info-title {
+    margin-top: 3px;
+    font-size: smaller;
+    font-weight: bolder;
+}
+
+.restaurant-info>p,
+.restaurant-category {
+    font-size: small;
+}
+
+.restaurant-description {
+    font-size: small;
+}
+
+
+li {
+    list-style: none;
+    font-size: small;
+}
+
+
+/*
+    Like
+  */
+.like {
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #db0000;
+
+    position: fixed;
+    bottom: 16px;
+    right: 16px;
+    border-radius: 50%;
+    border: 0;
+
+    font-size: 18px;
+    color: white;
+    cursor: pointer;
+}
+
+
+/* REVIEW INPUT */
+
+.review-input-container,
+customer-reviews {
+    margin: 15px auto;
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px rgba(154, 160, 185, .5), 1px 1px 20px rgba(166, 173, 201, .5);
+}
+
+customer-reviews {
+    align-items: center;
+}
+
+.review-input-container>h3,
+customer-reviews>h3 {
+    margin: 10px auto;
+    text-align: center;
+}
+
+input,
+textarea {
+    display: block;
+    border-radius: 5px;
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    padding: 10px;
+}
+
+.input,
+#reviewSubmit {
+    margin: 10px;
+}
+
+#reviewSubmit {
+    min-width: 80px;
+    min-height: 45px;
+    max-height: 45px;
+}
+
+.input>label {
+    font-weight: bold;
+}
+
+#reviewSubmit {
+    background: none;
+    padding: 6px;
+    border-radius: 3px;
+    box-shadow: none;
+    font-weight: bold;
+}
+
+/* CUSTOMER REVIEW */
+
+customer-review {
+    margin: 10px;
+    padding: 16px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px rgba(154, 160, 185, .5), 1px 1px 20px rgba(166, 173, 201, .5);
+    width: 100%;
+}
+
+customer-review>p,
+customer-review>h4 {
+    font-size: smaller;
+}
+
+.feedback {
+    max-width: 100%;
+    overflow-wrap: break-word;
+}
+
+@media only screen and (min-device-width: 768px) {
+    .restaurant-detail {
+        grid-template-columns: auto 1fr;
+        padding: 25px 35px;
+    }
+
+    .menus {
+        display: flex;
+        gap: 0 30px;
+    }
+
+    .restaurant-detail .restaurant-name {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
+    .restaurant-detail .restaurant-description {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
+    .restaurant-detail>h2 {
+        font-size: 1.5em;
+        font-weight: 900;
+    }
+
+
+    .restaurant-info-title {
+        margin-top: 3px;
+        font-size: medium;
+        font-weight: bolder;
+    }   
+
+    .input,
+    #reviewSubmit {
+        display: block;
+        margin: 16px;
+    }
+
+    customer-review>p,
+    customer-review>h4 {
+        font-size: medium;
+    }
+}
