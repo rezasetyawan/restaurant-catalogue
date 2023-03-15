@@ -9,7 +9,7 @@
     "e2e": "codeceptjs run --steps",
     "build-image": "node sharp.js",
     "start-dev": "webpack --config webpack.dev.js && npm run build-image",
-    "build": "webpack --config webpack.prod.js "
+    "build": "webpack --config webpack.prod.js && npm run build-image"
   },
   "keywords": [],
   "author": "your_name <your.email@domain.com>",

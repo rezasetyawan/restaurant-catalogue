@@ -32,7 +32,9 @@ module.exports = merge(common, {
     new MiniCssExtractPlugin({
       filename: 'main-[contenthash].css',
     }),
-    new BundleAnalyzerPlugin(),
+    new BundleAnalyzerPlugin({
+      analyzerMode: 'json',
+    }),
   ],
   output: {
     path: path.resolve(__dirname, 'dist'),
