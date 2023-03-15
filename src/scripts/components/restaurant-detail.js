@@ -1,3 +1,4 @@
+/* eslint-disable require-jsdoc */
 import './customer-reviews.js';
 import CONFIG from '../globals/config.js';
 import RestaurantApiSource from '../data/restaurant-api-source.js';

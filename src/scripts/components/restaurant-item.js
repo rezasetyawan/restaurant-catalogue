@@ -1,3 +1,4 @@
+/* eslint-disable require-jsdoc */
 /* eslint-disable max-len */
 import CONFIG from '../globals/config.js';
 
@@ -11,7 +12,7 @@ class RestaurantItem extends HTMLElement {
     const {name, city, rating, pictureId, description, id} = this._restaurant;
     this.innerHTML = `
       <article class="restaurant-item">
-      <img src="${CONFIG.BASE_IMAGE_URL}${pictureId}" alt="${name}" class="restaurant-item-thumbnail lazyload">
+      <img data-src="${CONFIG.BASE_IMAGE_URL}${pictureId}" alt="${name}" class="restaurant-item-thumbnail lazyload">
       <div class="restaurant-item-content">
       <span class="restaurant-city">${city}</span>
         <span class="restaurant-rating">Rating: ${rating}</span>

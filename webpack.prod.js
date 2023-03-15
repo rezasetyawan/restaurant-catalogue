@@ -3,8 +3,8 @@ const {merge} = require('webpack-merge');
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
-const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
- 
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
+
 module.exports = merge(common, {
   mode: 'production',
   module: {
@@ -30,13 +30,13 @@ module.exports = merge(common, {
   },
   plugins: [
     new MiniCssExtractPlugin({
-        filename: 'styles/main-[contenthash].css',
-      }),
-      new BundleAnalyzerPlugin(),
+      filename: 'main-[contenthash].css',
+    }),
+    new BundleAnalyzerPlugin(),
   ],
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: '[name].bundle-[contenthash].js',
+    filename: '[name]-[contenthash].bundle.js',
     clean: true,
   },
 });

@@ -1,3 +1,4 @@
+/* eslint-disable require-jsdoc */
 import './restaurant-item.js';
 
 class RestaurantList extends HTMLElement {
@@ -10,7 +11,7 @@ class RestaurantList extends HTMLElement {
     this.innerHTML = '';
     if (!this._restaurants.length) {
       this.style.display = 'block';
-      this.innerHTML = `<div class="restaurant-item__not__found">Tidak ada restaurant untuk ditampilkan</div>`
+      this.innerHTML = `<div class="restaurant-item__not__found">Tidak ada restaurant untuk ditampilkan</div>`;
     }
     this._restaurants.forEach((restaurant) => {
       this.style.display = 'grid';

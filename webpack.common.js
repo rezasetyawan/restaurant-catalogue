@@ -4,7 +4,7 @@ const ImageminWebpackPlugin = require('imagemin-webpack-plugin').default;
 const ImageminMozjpeg = require('imagemin-mozjpeg');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const path = require('path');
- 
+
 module.exports = {
   entry: {
     app: path.resolve(__dirname, 'src/scripts/index.js'),
@@ -37,25 +37,26 @@ module.exports = {
     rules: [
       {
         test: /\.css$/i,
-        use: [MiniCssExtractPlugin.loader , 'css-loader']
+        use: [MiniCssExtractPlugin.loader, 'css-loader'],
       },
     ],
   },
   plugins: [
     new HtmlWebpackPlugin({
-      filename: path.resolve(__dirname,'dist/templates/index.html'),
+      filename: 'index.html',
       template: path.resolve(__dirname, 'src/templates/index.html'),
     }),
     new CopyWebpackPlugin({
       patterns: [
         {
-          from: path.resolve(__dirname, 'src/public/'), 
+          from: path.resolve(__dirname, 'src/public/'),
           to: path.resolve(__dirname, 'dist/public/'),
         },
       ],
     }),
     new ImageminWebpackPlugin({
       plugins: [
+        // eslint-disable-next-line new-cap
         ImageminMozjpeg({
           quality: 50,
           progressive: true,

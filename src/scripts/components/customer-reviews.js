@@ -1,3 +1,4 @@
+/* eslint-disable require-jsdoc */
 import './customer-review.js';
 
 class CustomerReviews extends HTMLElement {

@@ -1,3 +1,4 @@
+/* eslint-disable require-jsdoc */
 class customerReview extends HTMLElement {
   set review(review) {
     this._review = review;

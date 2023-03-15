@@ -1,13 +1,15 @@
 const {merge} = require('webpack-merge');
 const path = require('path');
 const common = require('./webpack.common');
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = merge(common, {
   mode: 'development',
   devtool: 'inline-source-map',
   devServer: {
     static: path.join(__dirname, 'dist'),
-    open: ['/templates/index.html'],
+    open: true,
     port: 3000,
     client: {
       overlay: {
@@ -17,6 +19,9 @@ module.exports = merge(common, {
     },
     compress: true,
   },
+  plugins: [
+    new MiniCssExtractPlugin(),
+  ],
   optimization: {
     minimizer: [
       new CssMinimizerPlugin(),
@@ -24,7 +29,7 @@ module.exports = merge(common, {
   },
   output: {
     filename: '[name].bundle.js',
-    path: path.resolve(__dirname, 'dist/templates'),
+    path: path.resolve(__dirname, 'dist'),
     clean: true,
   },
 });
